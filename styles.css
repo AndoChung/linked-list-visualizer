@@ -1,6 +1,34 @@
+*, *::after, *::before {
+    box-sizing:border-box;
+}
+
+body {
+    background-color: rgba(150,150,150,1);
+}
+
+.node {
+    float:left;
+    width: 100px;
+    position:relative;
+}
+
+
+
+.node-index {
+    text-align: center;
+}
+
 .node-body {
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    background:aqua;
+    background: rgba(149,125,173,1);
+}
+
+.node-value-text {
+    text-align:center;
+}
+
+.node-next-text {
+    text-align: center;
 }
