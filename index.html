@@ -34,6 +34,7 @@
 <body>
     <h1>Linked List Visualizer</h1>
     <div class="toolbar">
+        <input type="text" id="input-node-value">
         <p>Push</p>
         <button id="add-node-button">Add Node</button>
     </div>
@@ -41,8 +42,18 @@
         <div class="node">
             <div class="node-index">0</div>
             <div class="node-body"></div>
-            <p class="node-value-text">Value: <div class="true-node-value">123</div></p>
-            <p class="node-next">Next: <div class="true-node-next">432</div></p>
+            <div class="node-value-text">
+                Value: 
+                <span class="true-node-value">
+                    1001
+                </span>
+            </div>
+            <div class="node-next-text">
+                Next:
+                <span class="true-node-next">
+                    null
+                </span>
+            </div>
         </div>
     </section>
     <script src="main.js"></script>
