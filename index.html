@@ -29,12 +29,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linked List Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Linked List Visualizer</h1>
-    <div>
-        <span>Method</span>
-        <
+    <div class="toolbar">
+        <p>Push</p>
+        <button id="add-node-button">Add Node</button>
     </div>
+    <section id="linked-list">
+        <div class="node">
+            <div class="node-index">0</div>
+            <div class="node-body"></div>
+            <p class="node-value-text">Value: <div class="true-node-value">123</div></p>
+            <p class="node-next">Next: <div class="true-node-next">432</div></p>
+        </div>
+    </section>
+    <script src="main.js"></script>
 </body>
 </html>
