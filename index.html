@@ -30,13 +30,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linked List Visualizer</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Linked List Visualizer</h1>
     <div class="toolbar">
+        <!-- <label for="method">Select Method</label> -->
+        <select id="method">
+            <option value="push">Push</option>
+            <option value="pop">Pop</option>
+            <option value="shift">Shift</option>
+            <option value="unshift">Unshift</option>
+        </select>
         <input type="text" id="input-node-value">
-        <p>Push</p>
-        <button id="add-node-button">Add Node</button>
+        <button class="apply-button" id="apply-push">Apply</button>
     </div>
     <section id="linked-list">
         <div class="node">
