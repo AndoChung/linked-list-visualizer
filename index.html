@@ -12,6 +12,8 @@
             Apply
         Shift
             Apply
+        Unshift
+            Node Color, Value, Apply
         Set
             Node Color, Value, Index (Input:Number), Apply
         Insert
@@ -34,15 +36,25 @@
 </head>
 <body>
     <h1>Linked List Visualizer</h1>
-    <div class="toolbar">
+    <div class="toolbar" id="toolbar">
         <!-- <label for="method">Select Method</label> -->
-        <select id="method">
-            <option value="push">Push</option>
-            <option value="pop">Pop</option>
-            <option value="shift">Shift</option>
-            <option value="unshift">Unshift</option>
-        </select>
-        <input type="text" id="input-node-value">
+        <div id="method-selector-div">
+            <h2>Method</h2>
+            <select id="method">
+                <option value="push">Push</option>
+                <option value="pop">Pop</option>
+                <option value="shift">Shift</option>
+                <option value="unshift">Unshift</option>
+                <option value="set">Set</option>
+                <option value="insert">Insert</option>
+                <option value="remove">Remove</option>
+                <option value="reverse">Reverse</option>
+            </select>
+        </div>
+        <div id="input-node-value-div">
+            <h2>Value</h2>
+            <input type="text" id="input-node-value">
+        </div>
         <button class="apply-button" id="apply-push">Apply</button>
     </div>
     <section id="linked-list">
@@ -52,7 +64,41 @@
             <div class="node-value-text">
                 Value: 
                 <span class="true-node-value">
-                    MONEY
+                    Pistachio
+                </span>
+            </div>
+            <div class="node-next-text">
+                Next:
+                <span class="true-node-next">
+                    Walnut
+                </span>
+            </div>
+        </div>
+        <div class="arrow"></div>
+        <div class="node">
+            <div class="node-index">1</div>
+            <div class="node-body"></div>
+            <div class="node-value-text">
+                Value: 
+                <span class="true-node-value">
+                    Walnut
+                </span>
+            </div>
+            <div class="node-next-text">
+                Next:
+                <span class="true-node-next">
+                    Macadamia
+                </span>
+            </div>
+        </div>
+        <div class="arrow"></div>
+        <div class="node">
+            <div class="node-index">2</div>
+            <div class="node-body"></div>
+            <div class="node-value-text">
+                Value: 
+                <span class="true-node-value">
+                    Macadamia
                 </span>
             </div>
             <div class="node-next-text">
