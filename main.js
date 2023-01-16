@@ -6,7 +6,7 @@ let method = document.getElementById("method");
 let inputNodeValueDiv = document.getElementById("input-node-value-div");
 
 method.addEventListener("change", changeMethod);
-apply.addEventListener("click", () => {pushNode(); popNode(); shiftNode(); unshiftNode(); setNode();});
+apply.addEventListener("click", () => {pushNode(); popNode(); shiftNode(); unshiftNode(); setNode(); insertNode(); removeNode(); reverse()});
 
 function changeMethod() {
     if (!(document.getElementById("input-node-value") === null)) {
@@ -74,6 +74,7 @@ function changeMethod() {
             inputNodeValueDiv.remove();
         }
     } else if (methodVal === "reverse") {
+        apply.id = "apply-reverse"
         if (!(document.getElementById("input-node-value") === null)) {
             inputNodeValueDiv.remove();
         }
@@ -246,7 +247,7 @@ function removeNode() {
 }
 
 function reverse() {
-    
+
 }
 
 
