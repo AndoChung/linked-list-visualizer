@@ -3,16 +3,17 @@
 }
 
 body {
-    background-color: rgba(150,150,150,1);
+    font-family: Bebas Neue;
+    background-color: rgba(100,100,100,1);
 }
 
 .node {
     float:left;
     width: 100px;
     position:relative;
+    margin-right: 3px;
+    margin-left: 10px;
 }
-
-
 
 .node-index {
     text-align: center;
@@ -22,7 +23,8 @@ body {
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    background: rgba(149,125,173,1);
+    background-image: linear-gradient(to bottom left,rgba(186,85,211,1),rgba(147,112,219,1));
+    border: 1px solid rgb(252, 192, 255);
 }
 
 .node-value-text {
@@ -32,3 +34,14 @@ body {
 .node-next-text {
     text-align: center;
 }
+
+.arrow {
+    float:left;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    padding: 5px;
+    transform: rotate(-45deg);
+    position:relative;
+    top:65px;
+}
+
