@@ -129,10 +129,10 @@ function insertNode() {
 
         let divTotal = linkedList.getElementsByTagName("div").length;
         let startingIndex = userInputIndex.value * 6 + 1;
-            for (let i = startingIndex; i < divTotal; i+=6) {
-                let nodeIndex = linkedList.getElementsByTagName("div")[i];
-                linkedList.getElementsByTagName("div")[i].innerText = Number(nodeIndex.innerText) + 1;
-            }
+        for (let i = startingIndex; i < divTotal; i+=6) {
+            let nodeIndex = linkedList.getElementsByTagName("div")[i];
+            linkedList.getElementsByTagName("div")[i].innerText = Number(nodeIndex.innerText) + 1;
+        }
         
         let arrow = addArrow();
         linkedList.insertBefore(newNode, linkedList.getElementsByClassName("node")[userInputIndex.value]);
@@ -141,7 +141,22 @@ function insertNode() {
 }
 
 function removeNode() {
-if ()
+    if (apply.id === "apply-remove") {
+        let userInputIndex = document.getElementById("input-node-index");
+
+        let newValue = linkedList.getElementsByClassName("node")[Number(userInputIndex.value) + 1].getElementsByTagName("div")[2].lastElementChild.innerText;
+        linkedList.getElementsByClassName("node")[Number(userInputIndex.value) - 1].lastElementChild.lastElementChild.innerText = newValue;
+        
+        linkedList.getElementsByTagName("div")[userInputIndex.value * 6].remove();
+        linkedList.getElementsByTagName("div")[userInputIndex.value * 6].remove();
+
+        let divTotal = linkedList.getElementsByTagName("div").length;
+        let startingIndex = userInputIndex.value * 6 + 1;
+        for (let i = startingIndex; i < divTotal; i+=6) {
+            let nodeIndex = linkedList.getElementsByTagName("div")[i];
+            linkedList.getElementsByTagName("div")[i].innerText = Number(nodeIndex.innerText) - 1;
+        }
+    }
 }
 
 function reverse() {
