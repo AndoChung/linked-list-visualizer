@@ -160,10 +160,21 @@ function removeNode() {
 }
 
 function reverse() {
-
+    if (apply.id === "apply-reverse") {
+        let nodeTotal = linkedList.getElementsByClassName("node");
+        for (let i = 0; i < nodeTotal.length / 2; i++) {
+            let firstNodeVal = nodeTotal[i].getElementsByTagName("div")[2].lastElementChild;
+            let secondNodeVal = nodeTotal[nodeTotal.length - i - 1].getElementsByTagName("div")[2].lastElementChild;
+            [firstNodeVal.innerText, secondNodeVal.innerText] = [secondNodeVal.innerText, firstNodeVal.innerText];
+        }
+        for (let i = 0; i < nodeTotal.length - 1; i++) {
+            let nextNodeVal = nodeTotal[i + 1].getElementsByTagName("div")[2].lastElementChild.innerText;
+            console.log(nextNodeVal)
+            nodeTotal[i].getElementsByTagName("div")[3].lastElementChild.innerText = nextNodeVal;
+        }
+        nodeTotal[nodeTotal.length - 1].getElementsByTagName("div").lastElementChild = "null";
+    }
 }
-
-
 
 
 function changeMethod() {

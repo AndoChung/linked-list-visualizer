@@ -5,7 +5,18 @@
 body {
     font-family: Bebas Neue;
     background-color: rgba(100,100,100,1);
+    margin: 0;
 }
+
+h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.toolbar {
+    margin:0
+}
+
 
 .node {
     float:left;
