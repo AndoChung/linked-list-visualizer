@@ -5,11 +5,11 @@
 body {
     font-family: Bebas Neue;
     background-color: rgba(100,100,100,1);
-    margin: 0;
+    margin: 20px;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 75px;
     margin: 0;
 }
 

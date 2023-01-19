@@ -124,7 +124,6 @@ function insertNode() {
         newNode.getElementsByTagName("div")[2].lastElementChild.innerText = userInputValue.value;
         nextNodeValue = linkedList.getElementsByClassName("node")[Number(userInputIndex.value)].getElementsByTagName("div")[2].lastElementChild.innerText;
         newNode.getElementsByTagName("div")[3].lastElementChild.innerText = nextNodeValue;
-
         linkedList.getElementsByClassName("node")[Number(userInputIndex.value) - 1].lastElementChild.lastElementChild.innerText = userInputValue.value;
 
         let divTotal = linkedList.getElementsByTagName("div").length;
@@ -169,7 +168,6 @@ function reverse() {
         }
         for (let i = 0; i < nodeTotal.length - 1; i++) {
             let nextNodeVal = nodeTotal[i + 1].getElementsByTagName("div")[2].lastElementChild.innerText;
-            console.log(nextNodeVal)
             nodeTotal[i].getElementsByTagName("div")[3].lastElementChild.innerText = nextNodeVal;
         }
         nodeTotal[nodeTotal.length - 1].getElementsByTagName("div").lastElementChild = "null";
