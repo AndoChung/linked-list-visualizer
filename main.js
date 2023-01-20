@@ -4,6 +4,7 @@ let userInputValue = document.getElementById("input-node-value");
 const toolbar = document.getElementById("toolbar");
 let method = document.getElementById("method");
 let inputNodeValueDiv = document.getElementById("input-node-value-div");
+const inputDiv = document.getElementById("input-div")
 
 method.addEventListener("change", changeMethod);
 apply.addEventListener("click", () => {pushNode(); popNode(); shiftNode(); unshiftNode(); setNode(); insertNode(); removeNode(); reverse()});
@@ -259,7 +260,7 @@ function addValueInput() {
     userInputValue.id = "input-node-value";
     inputNodeValueDiv.appendChild(valueString);
     inputNodeValueDiv.appendChild(userInputValue);
-    toolbar.insertBefore(inputNodeValueDiv,apply);
+    inputDiv.appendChild(inputNodeValueDiv);
 }
 function addIndexInput() {
     inputNodeIndexDiv = document.createElement("div");
@@ -271,7 +272,7 @@ function addIndexInput() {
     userInputIndex.id = "input-node-index";
     inputNodeIndexDiv.appendChild(indexString);
     inputNodeIndexDiv.appendChild(userInputIndex);
-    toolbar.insertBefore(inputNodeIndexDiv,apply);
+    inputDiv.appendChild(inputNodeIndexDiv);
 }
 function addNewNode() {
     const newNode = document.createElement("div");
@@ -306,6 +307,6 @@ function addNewNode() {
 function addArrow() {
     const arrow = document.createElement("div");
     arrow.className = "arrow";
-    
+
     return arrow;
 }
